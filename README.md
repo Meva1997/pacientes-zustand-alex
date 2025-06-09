@@ -1,54 +1,93 @@
-# React + TypeScript + Vite
+# Pacientes Zustand Alex
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **Pacientes Zustand Alex**, a project for managing patients using modern React state management with Zustand. This application is designed to demonstrate efficient and scalable state handling in a React environment, focusing on patient data management.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Overview](#overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Usage](#usage)
+- [License](#license)
 
-## Expanding the ESLint configuration
+## Overview
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Pacientes Zustand Alex is a sample project built with React and Zustand for state management. It provides a simple interface to add, view, and manage patient records. The project is intended to showcase best practices using Zustand, a minimalistic state management library for React.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Features
+
+- Add new patients with their information
+- View a list of all patients
+- Edit and remove patient records
+- Persist state using Zustand's middleware
+- Modern React functional components
+- Clean and maintainable codebase
+
+## Tech Stack
+
+- **React** – Frontend library for building UI
+- **Zustand** – State management
+- **TypeScript** (or TypeScript, if applicable)
+- **Vite** or **Create React App** (depending on setup)
+- Styling with **CSS** or **styled-components** (edit as appropriate)
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (>= 14.x)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Meva1997/pacientes-zustand-alex.git
+   cd pacientes-zustand-alex
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open [http://localhost:5173](http://localhost:5173) (or the port shown in your terminal) in your browser.
+
+## Project Structure
+
+```
+src/
+  components/      # React components (PatientForm, PatientList, etc.)
+  store/           # Zustand store configuration
+  App.jsx          # Main app component
+  main.jsx         # Entry point
+  ...
+public/
+  index.html
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Usage
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Add Patient:** Fill out the form and submit to add a new patient.
+- **Edit Patient:** Click "Edit" on a patient's card to update their info.
+- **Delete Patient:** Click "Delete" to remove a patient from the list.
+- All data is managed via Zustand's global store, providing a fast and intuitive experience.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+---
+
+Feel free to customize this README further for your project's needs!
